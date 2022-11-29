@@ -1,0 +1,45 @@
+.color1 {color: #140f07;}
+.color2 {color: #202d4e;}
+.color3 {color: #585fa6;}
+.color4 {color: #9e9cf9;}
+.color5 {color: #ffe5f4;}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #202d4e ;
+    color: white;
+}
+
+.contenedor{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titulo{
+    font-size: 40px;
+    text-decoration:line-through;
+    text-decoration-color: #585fa6;
+}
+
+.rayas{
+    display: grid;
+    max-width: 600px;
+    gap: 5px ;
+    background-color: #ffe5f4;/*color para el gap*/
+
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px;
+
+    border: 5px solid #585fa6;
+    border-radius: 5px;
+}
+
+.rayas>div{
+    background-color: #9e9cf9;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 5px;
+}
