@@ -1,31 +1,40 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rayas</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
-<body>
 
-    
-    
+<body onload="jugadorS()">
+
     <div class="contenedor">
         <div class="titulo">
-            <h2>  ¡¡ RAYAS !! </h2>
+            <h2> ¡¡ RAYAS !! </h2>
+        </div>
+        <div id="turno">
+            
         </div>
         <div class="rayas">
-            <div>1</div>
-            <div>2</div>
-            <div>3</div>
-            <div>4</div>
-            <div>5</div>
-            <div>6</div>
-            <div>7</div>
-            <div>8</div>
-            <div>9</div>
+            <div id="1" onclick="ponerFicha1()"></div>
+            <div id="2" onclick="ponerFicha2()"></div>
+            <div id="3" onclick="ponerFicha3()"></div>
+            <div id="4" onclick="ponerFicha4()"></div>
+            <div id="5" onclick="ponerFicha5()"></div>
+            <div id="6" onclick="ponerFicha6()"></div>
+            <div id="7" onclick="ponerFicha7()"></div>
+            <div id="8" onclick="ponerFicha8()"></div>
+            <div id="9" onclick="ponerFicha9()"></div>
         </div>
     </div>
+
+    <footer>
+        © Raul Rodriguez Cebrian
+    </footer>
 </body>
+
 </html>
