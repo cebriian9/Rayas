@@ -3,15 +3,15 @@
 
 //circulo
 //<div class='circulo'></div> <div class='circulo2'></div>
+
 let jugador=parseInt(Math.random() * 2 + 1)
 function jugadorS() {
     
-    console.log(jugador)
+    //console.log("jugador:"+jugador)
     decirJugador(jugador)
     
     return jugador
 }
-
 
 
 function decirJugador() {
@@ -26,7 +26,8 @@ function decirJugador() {
 
 //Tablero [9][9]=new Array()
 
-let puesta1=false
+
+/*let puesta1=false
 let puesta2=false
 let puesta3=false
 let puesta4=false
@@ -34,140 +35,73 @@ let puesta5=false
 let puesta6=false
 let puesta7=false
 let puesta8=false
-let puesta9=false
+let puesta9=false*/
 //----------------poner fichas--------
-function ponerFicha1() {
-    if (puesta1==false) {
+
+const  puesta=[]
+puesta[0]=false
+puesta[1]=false
+
+
+function ponerFicha(ficha,lugar) {
+    console.log("poniendo... "+puesta[ficha])
+
+    
+
+    if (puesta[ficha]==false) {
+        console.log("poniendo...")
+
         if (jugadorS() == 1) {
             console.log("pone cruz")
-            let ficha = document.getElementById("1").innerHTML = "<div class='arriba'></div>  <div class='abajo'></div>"
+            let ficha = document.getElementById(lugar).innerHTML = "<div class='arriba'></div>  <div class='abajo'></div>"
             jugador=2
-            puesta1=true
+            puesta[ficha]=true
+
+            console.log("pusa "+puesta[ficha])
+            
         } else {
             console.log("pone circulo")
-            let ficha = document.getElementById("1").innerHTML = "<div class='circulo'></div> <div class='circulo2'></div>"
+            let ficha = document.getElementById(lugar).innerHTML = "<div class='circulo'></div> <div class='circulo2'></div>"
             jugador=1
-            puesta1=true
+            puesta[ficha]=true
+            
+            console.log("pusa "+puesta[ficha])
         }
+        console.log("pusa "+puesta[ficha])
     }
+
+    console.log("pusa2 "+puesta[ficha])
+    decirJugador(jugador)
+    console.log("----------------------------")
 }
-function ponerFicha2() {
-    if (puesta2==false) {
-        if (jugadorS() == 1) {
-            console.log("pone cruz")
-            let ficha = document.getElementById("2").innerHTML = "<div class='arriba'></div>  <div class='abajo'></div>"
-            jugador=2
-            puesta2=true
-        } else {
-            console.log("pone circulo")
-            let ficha = document.getElementById("2").innerHTML = "<div class='circulo'></div> <div class='circulo2'></div>"
-            jugador=1
-            puesta2=true
-        }
-    }
+
+
+function ficha1() {
+    console.log("ficha1")
+   ponerFicha(0,"1")
 }
-function ponerFicha3() {
-    if (puesta3==false) {
-        if (jugadorS() == 1) {
-            console.log("pone cruz")
-            let ficha = document.getElementById("3").innerHTML = "<div class='arriba'></div>  <div class='abajo'></div>"
-            jugador=2
-            puesta3=true
-        } else {
-            console.log("pone circulo")
-            let ficha = document.getElementById("3").innerHTML = "<div class='circulo'></div> <div class='circulo2'></div>"
-            jugador=1
-            puesta3=true
-        }
-    }
+function ficha2() {
+    console.log("ficha2")
+    ponerFicha(1,"2")
 }
-function ponerFicha4() {
-    if (puesta4==false) {
-        if (jugadorS() == 1) {
-            console.log("pone cruz")
-            let ficha = document.getElementById("4").innerHTML = "<div class='arriba'></div>  <div class='abajo'></div>"
-            jugador=2
-            puesta4=true
-        } else {
-            console.log("pone circulo")
-            let ficha = document.getElementById("4").innerHTML = "<div class='circulo'></div> <div class='circulo2'></div>"
-            jugador=1
-            puesta4=true
-        }
-    }
+function ficha3() {
+   
 }
-function ponerFicha5() {
-    if (puesta5==false) {
-        if (jugadorS() == 1) {
-            console.log("pone cruz")
-            let ficha = document.getElementById("5").innerHTML = "<div class='arriba'></div>  <div class='abajo'></div>"
-            jugador=2
-            puesta5=true
-        } else {
-            console.log("pone circulo")
-            let ficha = document.getElementById("5").innerHTML = "<div class='circulo'></div> <div class='circulo2'></div>"
-            jugador=1
-            puesta5=true
-        }
-    }
+function ficha4() {
+    
 }
-function ponerFicha6() {
-    if (puesta6==false) {
-        if (jugadorS() == 1) {
-            console.log("pone cruz")
-            let ficha = document.getElementById("6").innerHTML = "<div class='arriba'></div>  <div class='abajo'></div>"
-            jugador=2
-            puesta6=true
-        } else {
-            console.log("pone circulo")
-            let ficha = document.getElementById("6").innerHTML = "<div class='circulo'></div> <div class='circulo2'></div>"
-            jugador=1
-            puesta6=true
-        }
-    }
+function ficha5() {
+    
 }
-function ponerFicha7() {
-    if (puesta7==false) {
-        if (jugadorS() == 1) {
-            console.log("pone cruz")
-            let ficha = document.getElementById("7").innerHTML = "<div class='arriba'></div>  <div class='abajo'></div>"
-            jugador=2
-            puesta7=true
-        } else {
-            console.log("pone circulo")
-            let ficha = document.getElementById("7").innerHTML = "<div class='circulo'></div> <div class='circulo2'></div>"
-            jugador=1
-            puesta7=true
-        }
-    }
+function ficha6() {
+    
 }
-function ponerFicha8() {
-    if (puesta8==false) {
-        if (jugadorS() == 1) {
-            console.log("pone cruz")
-            let ficha = document.getElementById("8").innerHTML = "<div class='arriba'></div>  <div class='abajo'></div>"
-            jugador=2
-            puesta8=true
-        } else {
-            console.log("pone circulo")
-            let ficha = document.getElementById("8").innerHTML = "<div class='circulo'></div> <div class='circulo2'></div>"
-            jugador=1
-            puesta8=true
-        }
-    }
+function ficha7() {
+    
 }
-function ponerFicha9() {
-    if (puesta9==false) {
-        if (jugadorS() == 1) {
-            console.log("pone cruz")
-            let ficha = document.getElementById("9").innerHTML = "<div class='arriba'></div>  <div class='abajo'></div>"
-            jugador=2
-            puesta9=true
-        } else {
-            console.log("pone circulo")
-            let ficha = document.getElementById("9").innerHTML = "<div class='circulo'></div> <div class='circulo2'></div>"
-            jugador=1
-            puesta9=true
-        }
-    }
+function ficha8() {
+    
+}
+function ficha9() {
+    
 }
