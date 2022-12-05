@@ -4,7 +4,18 @@
 //circulo
 //<div class='circulo'></div> <div class='circulo2'></div>
 
+//determinar el jugador de inicio
 let jugador=parseInt(Math.random() * 2 + 1)
+
+//comprobar que lugar esta ocupado
+let arrPuesta=[false,false,false,false,false,false,false,false,false]
+
+// 0=ninguna, 1=cruz, 2=circulo
+let arrfichas=[]
+
+let ganado=false
+
+
 function jugadorS() {
     
     //console.log("jugador:"+jugador)
@@ -12,7 +23,6 @@ function jugadorS() {
     
     return jugador
 }
-
 
 function decirJugador() {
     if (jugador == 1) {
@@ -24,84 +34,51 @@ function decirJugador() {
     }
 }
 
-//Tablero [9][9]=new Array()
-
-
-/*let puesta1=false
-let puesta2=false
-let puesta3=false
-let puesta4=false
-let puesta5=false
-let puesta6=false
-let puesta7=false
-let puesta8=false
-let puesta9=false*/
-//----------------poner fichas--------
-
-const  puesta=[]
-puesta[0]=false
-puesta[1]=false
 
 
 function ponerFicha(ficha,lugar) {
-    console.log("poniendo... "+puesta[ficha])
 
-    
-
-    if (puesta[ficha]==false) {
-        console.log("poniendo...")
+    if (arrPuesta[ficha]==false ) {
 
         if (jugadorS() == 1) {
             console.log("pone cruz")
-            let ficha = document.getElementById(lugar).innerHTML = "<div class='arriba'></div>  <div class='abajo'></div>"
+            document.getElementById(lugar).innerHTML = "<div class='arriba'></div>  <div class='abajo'></div>"
             jugador=2
-            puesta[ficha]=true
-
-            console.log("pusa "+puesta[ficha])
             
+                        
         } else {
             console.log("pone circulo")
-            let ficha = document.getElementById(lugar).innerHTML = "<div class='circulo'></div> <div class='circulo2'></div>"
+            document.getElementById(lugar).innerHTML = "<div class='circulo'></div> <div class='circulo2'></div>"
             jugador=1
-            puesta[ficha]=true
             
-            console.log("pusa "+puesta[ficha])
+
         }
-        console.log("pusa "+puesta[ficha])
+        arrfichas[ficha]=jugadorS()
     }
-
-    console.log("pusa2 "+puesta[ficha])
+    
+    arrPuesta[ficha]=true
     decirJugador(jugador)
-    console.log("----------------------------")
+    
+    comprobarWin()
 }
 
 
-function ficha1() {
-    console.log("ficha1")
-   ponerFicha(0,"1")
-}
-function ficha2() {
-    console.log("ficha2")
-    ponerFicha(1,"2")
-}
-function ficha3() {
-   
-}
-function ficha4() {
+function comprobarWin() {
     
+
+
 }
-function ficha5() {
-    
-}
-function ficha6() {
-    
-}
-function ficha7() {
-    
-}
-function ficha8() {
-    
-}
-function ficha9() {
-    
+
+function reset() {
+
+    console.log("reset")
+    for (let index = 0; index < 9; index++) {
+        let id=index+""
+        console.log(id)
+        document.getElementById(id).innerHTML = "<div class='circulo'></div> <div class='circulo2'></div>"
+
+        
+    }
+    arrPuesta=[false,false,false,false,false,false,false,false,false]
+    arrfichas=[]
 }
