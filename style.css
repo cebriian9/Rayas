@@ -117,8 +117,8 @@ button {
 
 /*casillas explicativas*/
 .instrucciones>div {
-    width: 80px;
-    height: 80px;
+    width: 90px;
+    height: 90px;
     background-color: #9e9cf9;
     border-radius: 10px;
 
@@ -177,7 +177,7 @@ button {
 
 #marcador1,
 #marcador2{
-    font-size: 30px;
+    font-size: 50px;
     color: #202d4e;
 }
 
