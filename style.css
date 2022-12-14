@@ -17,6 +17,10 @@
 .color5 {
     color: #ffe5f4;
 }
+/*
+*{
+    border: 1px solid red;
+}*/
 
 body {
     font-family: Arial, Helvetica, sans-serif;
@@ -24,6 +28,7 @@ body {
     color: white;
 }
 
+/*contenedor general*/
 .contenedor {
     display: flex;
     flex-direction: column;
@@ -38,7 +43,7 @@ body {
 }
 
 
-
+/*tablero general*/
 .rayas {
     display: grid;
     max-width: 600px;
@@ -55,6 +60,7 @@ body {
     margin-top: 10px;
 }
 
+/*cuadritos de dentro jugables*/
 .rayas>div {
     background-color: #9e9cf9;
     display: flex;
@@ -66,7 +72,8 @@ body {
     position: relative;
 }
 
-button{
+/*----reset----*/
+button {
     margin-top: 10px;
     padding: 10px;
     border: 0;
@@ -75,6 +82,113 @@ button{
 }
 
 
+/*----/intrucciones----*/
+/*contenedor para centrar todo bien*/
+.centrado-instrucciones {
+    display: grid;
+    place-items: center;
+}
+
+/*contenedor donde esta toda la data*/
+.flex-instrucciones {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+    place-items: center;
+    max-width: 310px;
+}
+
+/*mini tablero*/
+.instrucciones {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+    background-color: #ffe5f4;
+    /*color para el gap*/
+
+    padding: 5px;
+    border: 5px solid #585fa6;
+    border-radius: 5px;
+    grid-column: 2;
+    grid-row: 2;
+}
+
+/*casillas explicativas*/
+.instrucciones>div {
+    width: 80px;
+    height: 80px;
+    background-color: #9e9cf9;
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.instrucciones>div>h4 {
+    color: #202d4e;
+}
+
+.flex-instrucciones>p {
+    margin-top: 0px;
+    padding: 20px;
+    grid-column: 2;
+    grid-row: 3;
+}
+
+.tituloInstrucciones {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+/*----/intrucciones----*/
+
+/*---laderborard----*/
+
+.laderboard-center{
+    display: grid;
+    place-items: center;
+}
+
+.laderboard{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows:  1fr 2fr;
+    gap: 10px;
+    background-color: #ffe5f4;
+    /*color para el gap*/
+
+    padding: 5px;
+    border: 5px solid #585fa6;
+    border-radius: 5px;
+
+}
+
+.laderboard>div{
+    background-color: #9e9cf9;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#marcador1,
+#marcador2{
+    font-size: 30px;
+    color: #202d4e;
+}
+
+.laderboard>div>*{
+    color: #202d4e;
+    padding: 5px;
+}
+
+
+
+/*---/laderborard----*/
+
 footer {
     display: flex;
     justify-content: center;
@@ -82,8 +196,8 @@ footer {
     text-align: center;
 }
 
-@media (max-width:300px) {
-    
+@media (max-width:600px) {
+   
 }
 
 /*--barras--*/
@@ -127,4 +241,3 @@ footer {
 }
 
 /*--/circulo--*/
-

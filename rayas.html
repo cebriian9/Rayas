@@ -7,17 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rayas</title>
     <link rel="stylesheet" href="style.css">
-    
+
 </head>
 
-<body onload="jugadorS()">
+<body onload="jugadorS();crearCookie()">
 
     <div class="contenedor">
         <div class="titulo">
             <h2> ¡¡ RAYAS !! </h2>
         </div>
         <div id="turno">
-            
+            <h3>Truno de</h3>
         </div>
         <div class="rayas">
             <div id="1" onclick="ponerFicha(0,1)"></div>
@@ -35,11 +35,54 @@
 
     </div>
 
+    <div class="laderboard-center">
+        <h3>Victorias</h3>
+        <div class="laderboard">
+            <div>
+                <h4>Jugador 1</h4>
+            </div>
+            <div>
+                <h4>Jugador 2</h4>
+            </div>
+
+            <div id="marcador1">
+
+            </div>
+            <div id="marcador2">
+
+            </div>
+        </div>
+        <button onclick="setCookie('jugador1',0);setCookie('jugador2',0)">RESETAR MARCADOR</button>
+
+    </div>
+
+    <div class="centrado-instrucciones">
+        <div class="flex-instrucciones">
+            <h3 class="tituloInstrucciones">Instrucciones</h3>
+            <div class="instrucciones">
+                <div>
+                    <div class='arriba'></div>  <div class='abajo'></div>
+                </div>
+                <div>
+                    <div class='circulo'></div> <div class='circulo2'></div>
+                </div>
+                <div>
+                    <h4>Jugador 1</h4>
+                </div>
+                <div>
+                    <h4>Jugador 2</h4>
+                </div>
+            </div>
+            <p>Consigue alinar tres de tus fichas para ganar.</p>
+        </div>
+    </div>
+
+    
     <footer>
         © Raul Rodriguez Cebrian<br>
         (cebriian95)
     </footer>
-    
+
     <script src="script.js"></script>
 </body>
 
